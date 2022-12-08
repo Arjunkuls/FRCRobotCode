@@ -25,9 +25,8 @@ public class Intake extends SubsystemBase {
   public static double power = 0.4;
 
   /** Creates a new Intake. */
-  public static int pwr;
   public Intake() {
-    Solenoid = new Solenoid(PneumaticsModuleType.CTREPCM,7);
+    Solenoid = new Solenoid(PneumaticsModuleType.CTREPCM, Constants.Solenoid);
     intake = new TalonFX(Constants.Intake);
     feeder = new TalonFX(Constants.Feeder);
 

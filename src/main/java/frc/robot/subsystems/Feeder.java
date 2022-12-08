@@ -70,7 +70,9 @@ public class Feeder extends SubsystemBase {
       }
       frontFeeder.set(TalonFXControlMode.PercentOutput, 0.3);
     }
-    if ((tripBreaker(beamBreaker2) && tripBreaker(beamBreaker3)) || (!tripBreaker(beamBreaker2) && tripBreaker(beamBreaker3)) || !tripBreaker(beamBreaker1) && !tripBreaker(beamBreaker2))
+    if ((tripBreaker(beamBreaker2) && tripBreaker(beamBreaker3)) || 
+    (!tripBreaker(beamBreaker2) && tripBreaker(beamBreaker3)) || !tripBreaker(beamBreaker1) && 
+    !tripBreaker(beamBreaker2))
     {
       frontFeeder.set(TalonFXControlMode.PercentOutput, 0);
       backFeeder.set(TalonFXControlMode.PercentOutput, 0);
